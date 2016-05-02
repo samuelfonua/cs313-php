@@ -1,0 +1,93 @@
+.homepage{
+line-height: 1;
+font-size: 20px;
+display: block;
+position: absolute;
+top: 17px;
+padding left: 2px;
+}
+.hompage-container{
+padding-top: 0.01em;
+padding-bottom: 0.01em;
+padding-left: 16px;
+padding-right: 16px;
+}
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover {
+    background-color: #eeeeee;
+}
+.top{
+height: 48px;
+line-height: 48px;
+}
+.topnav {
+    padding: 0 10px;
+    padding-top: 0px;
+    padding-right: 0px;
+    padding-bottom: 0px;
+    padding-left: 0px;
+}
+.top-left{
+float: left
+}
+.top-right {
+float: right;
+}
+.wide{
+letter-spacing: 4px;
+}
+#nav {
+    line-height:30px;
+    background-color:#eeeeee;
+    height: auto;
+    width:200px;
+    float:left;
+    padding:5px;	 
+    text-align: center;	
+}
+#navright {
+    line-height:30px;
+    background-color:#eeeeee;
+    height: auto;
+    width:200px;
+    float:right;
+    padding:5px;	 
+    text-align: center;	
+}
+#navpics {
+width: 180px;
+height: 180px;
+}
+#section {
+    width:auto;
+    float:left;
+    padding:10px;	 	 
+}
+#main {
+width: 600px;
+height: auto;
+border-style: solid;
+}
+#secpics {
+width: 888px;
+height: 200px;
+}
