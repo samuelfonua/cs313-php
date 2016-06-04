@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+function showQuestion(str) {
+    if (str == "") {
+        document.getElementById("question").innerHTML = "";
+        return;
+    } else { 
+        if (window.XMLHttpRequest) {
+            // code for IE7+, Firefox, Chrome, Opera, Safari
+            xmlhttp = new XMLHttpRequest();
+        } else {
+            // code for IE6, IE5
+            xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+        }
+        xmlhttp.onreadystatechange = function() {
+            if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+                document.getElementById("question").innerHTML = xmlhttp.responseText;
+            }
+        };
+		
+        xmlhttp.open("GET","fcquestions.php?q="+str,true);
+        xmlhttp.send();
+    }
+}
+function showAnswer(str) {
+    if (str == "") {
+        document.getElementById("answer").innerHTML = "";
+        return;
+    } else { 
+        if (window.XMLHttpRequest) {
+            // code for IE7+, Firefox, Chrome, Opera, Safari
+            xmlhttp = new XMLHttpRequest();
+        } else {
+            // code for IE6, IE5
+            xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+        }
+        xmlhttp.onreadystatechange = function() {
+            if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+                document.getElementById("answer").innerHTML = xmlhttp.responseText;
+            }
+        };
+		
+        xmlhttp.open("GET","fcanswers.php?q="+str,true);
+        xmlhttp.send();
+    }
+}
+</script>
+<title>Flashcard Q&A's</title>
+<link rel="stylesheet" type="text/css" href="\fc.css">
+</head>
+<body>
+<div class="homepage-container top">
+<h1 class="bold">Flashcard Study Aid</h1>
+</div>
+
+<div class="topnav">
+<ul>
+  <li><a class="active" href="\fcHome.html">Home</a></li>
+  <li><a href="\fcCreate.html">Create</a></li>
+  <li><a href="\fcStudy.html">Study</a></li>
+  <li><a href="#about">About</a></li>
+</ul>
+</div>
+
+<h1> Study Time </h1>
+<div class="form-container">
+<form>
+<select name="users" onchange="showQuestion(this.value)">
+  <option value="">Select a question:</option>
+  <option value="1">1</option>
+  <option value="2">2</option>
+  <option value="3">3</option>
+  <option value="4">4</option>
+  <option value="5">5</option>
+  <option value="6">6</option>
+  <option value="7">7</option>
+  <option value="8">8</option>
+  <option value="9">9</option>
+  <option value="10">10</option>
+</select>
+</form>
+<form style="float:right">
+<select name="users" onchange="showAnswer(this.value)">
+  <option value="">Select an answer:</option>
+  <option value="1">1</option>
+  <option value="2">2</option>
+  <option value="3">3</option>
+  <option value="4">4</option>
+  <option value="5">5</option>
+  <option value="6">6</option>
+  <option value="7">7</option>
+  <option value="8">8</option>
+  <option value="9">9</option>
+  <option value="10">10</option>
+</select>
+</form>
+</div>
+<div id="question">
+Question goes here
+</div>
+
+<div id="answer">
+Answers
+</div>
+<div id="Q">
+
+</div>
+</body>
+</html>

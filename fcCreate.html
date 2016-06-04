@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Flashcard Q&A's</title>
+<link rel="stylesheet" type="text/css" href="\fc.css">
+</head>
+<body>
+<div class="homepage-container top">
+<h1 class="bold">Flashcard Study Aid</h1>
+</div>
+<div class="topnav">
+<ul>
+  <li><a class="active" href="\fcHome.html">Home</a></li>
+  <li><a href="\fcCreate.html">Create</a></li>
+  <li><a href="\fcStudy.html">Study</a></li>
+  <li><a href="#about">About</a></li>
+</ul>
+</div>
+<h1> Create your Flashcard Set </h1>
+
+<h3 align:'center'> Add a question and answer here: </h3>
+<form action="insert.php" method="post">
+    <p>
+        <label for="question">Question:</label>
+        <input type="text" name="q" id="q">
+    </p>
+    <p>
+        <label for="answer">Anwer:</label>
+        <input type="text" name="a" id="a">
+    </p>
+    <input type="submit" value="Submit">
+</form>
+
+<h3 align:'center'> Remove a question and answer here: </h3>
+<form action="delete.php" method="post">
+    <p>
+        <label for="question">Question:</label>
+        <input type="text" name="q" id="q">
+    </p>
+    <input type="submit" value="Submit">
+</form>
+
+</body>
+</html>

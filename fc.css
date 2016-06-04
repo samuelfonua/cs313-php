@@ -1,0 +1,92 @@
+html {
+	background-image: url("http://il5.picdn.net/shutterstock/videos/8884237/thumb/1.jpg");
+	min-height:100%;
+	background-size:cover;
+}
+.homepage{
+line-height: 1;
+font-size: 20px;
+display: block;
+position: center;
+top: 17px;
+padding left: 2px;
+}
+.hompage-container{
+padding-top: 0.01em;
+padding-bottom: 0.01em;
+padding-left: 16px;
+padding-right: 16px;
+}
+.top{
+height: 48px;
+line-height: 48px;
+}
+.top-right {
+float: right;
+}
+.topnav {
+    padding: 0 10px;
+    padding-top: 0px;
+    padding-right: 0px;
+    padding-bottom: 0px;
+    padding-left: 0px;
+}
+.wide{
+letter-spacing: 4px;
+}
+.bold {
+color: #333333;
+font-family: Impact, Charcoal, sans-serif;
+}
+#question{
+
+	width:450px; /* or whatever width you want. */
+	height:250px; /* or whatever width you want. */
+	background: white;
+	border: 3px solid #333333;
+	position: absolute;
+	left: 150px;
+}
+
+#answer{
+	width:450px; /* or whatever width you want. */
+	height:250px; /* or whatever width you want. */
+	background: white;
+	border: 3px solid #333333;
+	position: absolute;
+	right: 150px;
+}
+h1{
+	text-align: center;
+}
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover {
+    background-color: #eeeeee;
+}
+
+.form-container form{
+    display: inline;
+}
+
+#right {
+   
+	float: right;
+}
