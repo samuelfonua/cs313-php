@@ -19,15 +19,19 @@ th {text-align: left;}
 
 <?php
 $q = intval($_GET['q']);
+$dbHost = getenv('OPENSHIFT_MYSQL_DB_HOST'); 
+$dbPort = getenv('OPENSHIFT_MYSQL_DB_PORT'); 
+$dbUser = getenv('OPENSHIFT_MYSQL_DB_USERNAME'); 
+$dbPassword = getenv('OPENSHIFT_MYSQL_DB_PASSWORD');
+$link = mysqli_connect("$dbHost", "$dbUser", "$dbPassword", "flashcard_db");
 
-$con = mysqli_connect('localhost','root','','flashcard_db');
-if (!$con) {
-    die('Could not connect: ' . mysqli_error($con));
+if (!$link) {
+    die('Could not connect: ' . mysqli_error($link));
 }
 
-mysqli_select_db($con,"flashcard_db");
+mysqli_select_db($link,"flashcard_db");
 $sql="SELECT * FROM flashcard WHERE id = '".$q."'";
-$result = mysqli_query($con,$sql);
+$result = mysqli_query($link,$sql);
 
 echo "<table>
 <tr>
@@ -43,7 +47,7 @@ while($row = mysqli_fetch_array($result)) {
     echo "</tr>";
 }
 echo "</table>";
-mysqli_close($con);
+mysqli_close($link);
 ?>
 </body>
 </html>

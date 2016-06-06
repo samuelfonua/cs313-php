@@ -1,7 +1,9 @@
 <?php
-/* Attempt MySQL server connection. Assuming you are running MySQL
-server with default setting (user 'root' with no password) */
-$link = mysqli_connect("localhost", "root", "", "flashcard_db");
+$dbHost = getenv('OPENSHIFT_MYSQL_DB_HOST'); 
+$dbPort = getenv('OPENSHIFT_MYSQL_DB_PORT'); 
+$dbUser = getenv('OPENSHIFT_MYSQL_DB_USERNAME'); 
+$dbPassword = getenv('OPENSHIFT_MYSQL_DB_PASSWORD');
+$link = mysqli_connect("$dbHost", "$dbUser", "$dbPassword", "flashcard_db");
  
 // Check connection
 if($link === false){
